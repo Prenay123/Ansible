@@ -1,5 +1,5 @@
 - name: variables in files
-  hoats: local
+  hosts: local
   connection: local
   vars_files:
     - saperate-vars.yaml
