@@ -12,8 +12,6 @@
       ansible.builtin.debug:
         msg: " This is a full time {{ COURSE }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "
 
-
-
     - name: task variables
       ansible.builtin.debug:
         msg: " This is a full time {{ COURSE }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "
