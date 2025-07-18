@@ -6,6 +6,6 @@
     DURATION: 10hrs
     INSTRUCTUR: sivakumar
   tasks:
-  - name: variables
-    ansible.builtin.debug:
-      msg: " This is a full time {{ COURSE_NAME: }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }}"
+    - name: variables
+      ansible.builtin.debug:
+        msg: " This is a full time {{ COURSE_NAME: }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "
