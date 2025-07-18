@@ -1,5 +1,6 @@
 - name: play variables
   hosts: local
+  become: yes
   connection: local
   vars:
     COURSE_NAME: devops with AWS
