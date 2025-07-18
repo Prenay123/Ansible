@@ -3,7 +3,7 @@
   connection: local
   vars_files:
     - saperate-vars.yaml
-  tasks: 
+  tasks:
     - name: variables from files
       ansible.builtin.debug:
-        msg: " This is a full time {{ COURSE }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "  
+        msg: " This is a full time {{ COURSE }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "
