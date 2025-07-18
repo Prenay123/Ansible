@@ -1,0 +1,13 @@
+- name: taskl level variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: devops with AWS
+    DURATION: 102hrs
+    INSTRUCTUR: sivakumar
+  tasks:
+    - name: task variables
+      vars:
+        COURSE: Ansible
+      ansible.builtin.debug:
+        msg: " This is a full time {{ COURSE }} , with {{ DURATION }} duration, teaching by {{ INSTRUCTUR }} "
