@@ -1,0 +1,15 @@
+- name: condiations with gather info 
+  hosts: frontend
+  become: yes
+  tasks: 
+  - name: gather facts about the system
+    ansible.builtin.dnf:
+      name: nginx 
+      state: present
+    when: ansible_os_family == "RedHat"    
+
+  - name: gather facts about the system
+    ansible.builtin.dnf:
+      name: nginx 
+      state: present
+    when: ansible_os_family == "Debian" 
