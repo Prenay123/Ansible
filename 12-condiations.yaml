@@ -2,13 +2,13 @@
   hosts: frontend
   become: yes
   tasks: 
-  - name: gather facts about the system
+  - name: install nginx on RedHat
     ansible.builtin.dnf:
       name: nginx 
       state: present
     when: ansible_os_family == "RedHat"    
 
-  - name: gather facts about the system
+  - name: install nginx on Debian
     ansible.builtin.apt:
       name: nginx 
       state: present
