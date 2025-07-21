@@ -34,7 +34,5 @@
     - name: check valid ipaddress or not
       vars: 
         ip: "300.567.980.789"
-      tasks:
-        - name: validate the ip
-          ansible.builtin.debug:
-            msg: "{{ ip | ansible.utils.ipaddr }}"        
+      ansible.builtin.debug:
+        msg: "{{ ip | ansible.utils.ipaddr }}"        
