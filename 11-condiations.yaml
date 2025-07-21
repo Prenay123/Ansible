@@ -1,0 +1,16 @@
+- name: condiations
+  hosts: local
+  connection: local
+  vars:
+    COURSE: DevOps
+    IS_LIVE: true
+  tasks:
+    - name: check if the course is live or not 
+      ansible.builtin.debug:
+        msg: "The course {{ COURSE }} is live." 
+      when: IS_LIVE 
+
+    - name: check if the course is live or not 
+      ansible.builtin.debug:
+        msg: "The course {{ COURSE }} is live." 
+      when: IS_LIVE 
