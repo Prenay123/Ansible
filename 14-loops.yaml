@@ -2,10 +2,11 @@
   hosts: frontend
   become: yes
   tasks:
-    ansible.builtin.debug:
-    - name: "installing {{ item }}"
-      state: installed
-    loop: 
+    - name: install packages
+      ansible.builtin.debug:
+        name: "installing {{ item }}"
+        state: installed
+      loop: 
       - nginx
       - git
       - curl  
