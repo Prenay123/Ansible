@@ -29,4 +29,12 @@
           - {'key': 'duration', 'value': '120hrs'}
           - {'key': 'trainer', 'value': 'sivekumar'}
       ansible.builtin.debug:
-        msg: "course info: {{ course | items2dict }}"    
+        msg: "course info: {{ course | items2dict }}"  
+
+    - name: check valid ipaddress or not
+      vars: 
+        ip: "300.567.980.789"
+      tasks:
+       - name: validate the ip
+         ansible.builtin.debug:
+           msg: "{{ ip | ansible.utils.ipaddr }}"        
