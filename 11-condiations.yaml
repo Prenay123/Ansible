@@ -3,7 +3,7 @@
   connection: local
   vars:
     COURSE: DevOps
-    IS_LIVE: true
+    IS_LIVE: false
   tasks:
     - name: check if the course is live or not 
       ansible.builtin.debug:
@@ -12,5 +12,5 @@
 
     - name: check if the course is live or not 
       ansible.builtin.debug:
-        msg: "The course {{ COURSE }} is live." 
+        msg: "The course {{ COURSE }} is not Live." 
       when: IS_LIVE == false
