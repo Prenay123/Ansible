@@ -8,3 +8,6 @@
       ansible.builtin.debug:
         msg: "hello {{ persons }}"
 
+    - name: functions
+      ansible.builtin.debug:
+        msg: "hello {{ persons | split(,) }}"
