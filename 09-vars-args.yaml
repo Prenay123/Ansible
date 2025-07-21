@@ -1,0 +1,7 @@
+- name: variables from args
+  hosts: local
+  connection: local
+  tasks: 
+    - name: display user credentials
+      ansible.builtin.debug:
+        msg: "Username is {{ username }} and Password is {{ password }}" 
