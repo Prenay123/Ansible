@@ -3,7 +3,7 @@
   become: yes
   tasks:
     ansible.builtin.debug:
-    - name: installing {{ item }}
+    - name: "installing {{ item }}"
       state: installed
     loop: 
       - nginx
